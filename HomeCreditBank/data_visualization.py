@@ -16,7 +16,8 @@ class Visualization(MainInterface):
     def __init__(self, numeric_data, categorical_data):
         self.numeric_data = numeric_data
         self.categorical_data = categorical_data
-
+    
+    # Визуализация первых пяти признаков, включая TARGET,Timeline
     def vis_map(self):
 
         #Target value
