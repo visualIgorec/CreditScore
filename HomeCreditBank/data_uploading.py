@@ -8,7 +8,7 @@ class MainInterface(ABC):
     def upload(self):
         pass
 
-
+# Загрузка файла
 class Uploading(MainInterface):
     def __init__(self, file_path='data/application_train.csv', file_sep=','):
         self.file_path = file_path
