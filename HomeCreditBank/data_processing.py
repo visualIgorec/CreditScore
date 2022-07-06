@@ -38,7 +38,7 @@ class Processing(MainInterface):
     def category(self):
         self.cat_columns = list(self.raw_data.select_dtypes('object'))
         cat_data = self.raw_data[self.cat_columns]
-        print(f'Only cat Data: {cat_data}')
+        print(f'Only categorical Data: {cat_data}')
         return cat_data
 
 
