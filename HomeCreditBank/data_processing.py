@@ -23,21 +23,18 @@ class Processing(MainInterface):
 
     def __init__(self, raw_data):
         self.raw_data = raw_data
-    
-    #Удаление строк со значением NaN
+
     def nan_search(self):
         self.raw_data = self.raw_data.dropna()
         print(f'Data without NaN rows: {self.raw_data}')
         return self.raw_data
-    
-    #Выделение подвыборки только с числовыми признаками
+
     def numeric(self):
         self.numeric_columns = list(self.raw_data.select_dtypes('number'))
         numeric_data = self.raw_data[self.numeric_columns]
         print(f'Only nemeric Data: {numeric_data}')
         return numeric_data
-    
-    #Выделение подвыборки только с именными признаками
+
     def category(self):
         self.cat_columns = list(self.raw_data.select_dtypes('object'))
         cat_data = self.raw_data[self.cat_columns]
