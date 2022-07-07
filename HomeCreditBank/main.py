@@ -22,16 +22,17 @@ if __name__ == '__main__':
 
     #target variable
     name_list = filtered_data.columns
-
     #time_range = 1000
     num_fraction = 4 # according to quartiles
     feature = filtered_data[name_list[7]]   # AMT_INCOME_TOTAL
+    range_list = [0, 500000, 800000, 1000000, 4500000]
     #target = filtered_data['TARGET']     # TARGET
 
     # Visualization
-    map_data = Visualization(feature, name_list[7], num_fraction)
+    map_data = Visualization(feature, name_list[7], num_fraction, range_list)
     map_data.vis_map()
 
 
     #numeric_data = data.numeric()
     #categorical_data = data.category()
+
