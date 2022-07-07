@@ -35,3 +35,4 @@ if __name__ == '__main__':
 
     #numeric_data = data.numeric()
     #categorical_data = data.category()
+
